@@ -7,8 +7,7 @@ import { Action, configureStore, ThunkAction } from '@reduxjs/toolkit';
 // import { patientListApi } from '@/services/patientList';
 export function makeStore() {
   return configureStore({
-    reducer: {
-    }
+    reducer: {},
   });
 }
 
