@@ -3,6 +3,7 @@ import type { ChangeEvent } from 'react';
 import { useEffect, useRef } from 'react';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 
+import { supabase } from './helper';
 import type { AppDispatch, AppState } from './store';
 
 export const useForm =
@@ -47,11 +48,13 @@ export const useAppDispatch = () => useDispatch<AppDispatch>();
 
 export const useAppSelector: TypedUseSelectorHook<AppState> = useSelector;
 
-// TODO
-// export const useReduxState: () => [
-//   TypedUseSelectorHook<AppState>,
-//   AppDispatch,
-// ] = (state: TypedUseSelectorHook<AppState>) => [
-//   useAppSelector(state),
-//   useAppDispatch(),
-// ];
+export const useSupabase = async () => {
+  const {
+    data: labels,
+    error,
+    status,
+  } = await supabase.from('Label').select('*');
+  console.log('labels', labels);
+  console.log('status', status);
+  return { labels, status };
+};
