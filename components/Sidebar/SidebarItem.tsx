@@ -1,30 +1,29 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 const SidebarItem = () => {
   return (
-    <div className='h-screen drawer drawer-mobile w-full'>
-      <input id='my-drawer-2' type='checkbox' className='drawer-toggle' />
-      <div className='drawer-content flex flex-col items-center justify-center'>
-        {/* Page content here */}
-        <label
-          htmlFor='my-drawer-2'
-          className='btn btn-primary drawer-button lg:hidden'
+    <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+      <div className='flex items-center'>
+        <svg
+          xmlns='http://www.w3.org/2000/svg'
+          className='icon icon-tabler icon-tabler-grid'
+          width={18}
+          height={18}
+          viewBox='0 0 24 24'
+          strokeWidth='1.5'
+          stroke='currentColor'
+          fill='none'
+          strokeLinecap='round'
+          strokeLinejoin='round'
         >
-          Open drawer
-        </label>
+          <path stroke='none' d='M0 0h24v24H0z' />
+          <rect x={4} y={4} width={6} height={6} rx={1} />
+          <rect x={14} y={4} width={6} height={6} rx={1} />
+          <rect x={4} y={14} width={6} height={6} rx={1} />
+          <rect x={14} y={14} width={6} height={6} rx={1} />
+        </svg>
+        <span className='text-sm  ml-2'>Dashboard</span>
       </div>
-      <div className='drawer-side'>
-        <label htmlFor='my-drawer-2' className='drawer-overlay' />
-        <ul className='menu p-4 overflow-y-auto w-80 bg-base-100 text-base-content'>
-          {/* Sidebar content here */}
-          <li>
-            <a>Sidebar Item 1</a>
-          </li>
-          <li>
-            <a>Sidebar Item 2</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    </li>
   );
 };
 

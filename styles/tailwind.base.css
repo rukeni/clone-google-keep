@@ -4,3 +4,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.font-pen-script {
+  font-family: 'Nanum Pen Script', cursive;
+}
+
+.font-black-han {
+  font-family: 'Black Han Sans', sans-serif;
+}
+
+.font-dokdo {
+  font-family: 'East Sea Dokdo', cursive;
+}
+
+.font-gugi {
+  font-family: 'Gugi', cursive;
+}
