@@ -4,7 +4,7 @@ function Sidebar() {
     <>
       {/* Sidebar starts */}
       {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
-      <div className='w-64 absolute sm:relative text-white shadow md:h-full flex-col justify-between sm:flex min-h-screen'>
+      <div className='w-64 absolute sm:relative text-white flex-col justify-between sm:flex h-[calc(100vh-88px)]'>
         <div>
           <div className='h-8 w-full flex flex-col px-8 mt-5 font-pen-script '>
             <p className='text-xl leading-3 text-left text-gray-600'>
@@ -116,9 +116,9 @@ function Sidebar() {
             </li>
           </ul>
         </div>
-        <div className='px-8 bg-indigo-800'>
+        <footer className='px-8 border-t'>
           <ul className='w-full flex items-center justify-between '>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='cursor-pointer text-[#202124] pt-5 pb-3'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-bell'
@@ -136,7 +136,7 @@ function Sidebar() {
                 <path d='M9 17v1a3 3 0 0 0 6 0v-1' />
               </svg>
             </li>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='cursor-pointer text-[#202124] pt-5 pb-3'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-messages'
@@ -154,7 +154,7 @@ function Sidebar() {
                 <path d='M14 15v2a1 1 0 0 1 -1 1h-7l-3 3v-10a1 1 0 0 1 1 -1h2' />
               </svg>
             </li>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='cursor-pointer text-[#202124] pt-5 pb-3'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-settings'
@@ -172,7 +172,7 @@ function Sidebar() {
                 <circle cx={12} cy={12} r={3} />
               </svg>
             </li>
-            <li className='cursor-pointer text-white pt-5 pb-3'>
+            <li className='cursor-pointer text-[#202124] pt-5 pb-3'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
                 className='icon icon-tabler icon-tabler-archive'
@@ -192,7 +192,7 @@ function Sidebar() {
               </svg>
             </li>
           </ul>
-        </div>
+        </footer>
       </div>
       <div className='text-gray-600 mr-8 visible sm:hidden relative'>
         <ul className='p-y w-64 border-r bg-indigo-900 absolute rounded left-0 shadow mt-8 sm:mt-16 hidden'>
@@ -367,12 +367,6 @@ function Sidebar() {
       </div>
       {/* Sidebar ends */}
       {/* Remove class [ h-64 ] when adding a card block */}
-      <div className='container mx-auto py-10 h-64 md:w-4/5 w-11/12 px-6'>
-        {/* Remove class [ border-dashed border-2 border-gray-300 ] to remove dotted border */}
-        <div className='w-full h-full rounded border-dashed border-2 border-gray-300'>
-          {/* Place your content here */}
-        </div>
-      </div>
     </>
   );
 }
