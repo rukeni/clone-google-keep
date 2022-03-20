@@ -7,11 +7,11 @@ function Sidebar() {
       <div className='w-64 absolute sm:relative text-white flex-col justify-between sm:flex h-[calc(100vh-88px)]'>
         <div>
           <div className='h-8 w-full flex flex-col px-8 mt-5 font-pen-script '>
-            <p className='text-xl leading-3 text-left text-gray-600'>
+            <p className='text-xl leading-3 text-left text-base-content'>
               글쓰기 좋은날!
             </p>
-            <h3 className='text-2xl leading-5 text-gray-800 mt-2'>
-              <span className='font-bold text-indigo-500'>다시</span> 돌아오신걸
+            <h3 className='text-2xl leading-5 mt-2 text-base-content'>
+              <span className='font-bold text-primary'>다시</span> 돌아오신걸
               환영합니다.
             </h3>
           </div>

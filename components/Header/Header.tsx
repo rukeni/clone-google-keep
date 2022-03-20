@@ -1,5 +1,9 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
+
+import ThemeDropDown from '../ThemeDropDown/ThemeDropDown';
 
 export default function Index() {
   const [rotate, setRotate] = useState(false);
@@ -95,7 +99,8 @@ export default function Index() {
                     <div className='animate-ping w-1.5 h-1.5 bg-indigo-500 rounded-full absolute top-1 right-0 m-auto duration-200' />
                     <div className=' w-1.5 h-1.5 bg-indigo-500 rounded-full absolute top-1 right-0 m-auto shadow-lg' />
                   </div>
-                  <div className=' flex justify-center items-center flex-row'>
+                  <ThemeDropDown />
+                  {/* <div className=' flex justify-center items-center flex-row '>
                     <img
                       className='w-10 h-10 '
                       src='https://i.ibb.co/QMddNDb/Ellipse-14.png'
@@ -128,7 +133,7 @@ export default function Index() {
                         strokeLinejoin='round'
                       />
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
                 {/* Burger Icon */}
                 <button
