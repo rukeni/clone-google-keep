@@ -1,7 +1,13 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
-import React from 'react';
+import React, { MouseEventHandler } from 'react';
 
 const ThemeDropDown = () => {
+  const handleTheme: MouseEventHandler<HTMLButtonElement> = (event) => {
+    document.documentElement.setAttribute(
+      'data-theme',
+      event.currentTarget.value,
+    );
+  };
   return (
     <button title='테마 색 변경' className='dropdown dropdown-end '>
       <div tabIndex={0} className='btn gap-1 normal-case btn-ghost'>
@@ -39,15 +45,10 @@ const ThemeDropDown = () => {
             data-act-class='outline'
           >
             <button
+              value='light'
               data-theme='light'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
-              value='light'
-              onClick={(event) => {
-                document.documentElement.setAttribute(
-                  'data-theme',
-                  event.currentTarget.value,
-                );
-              }}
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -68,15 +69,10 @@ const ThemeDropDown = () => {
             data-act-class='outline'
           >
             <button
+              value='dark'
               data-theme='dark'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
-              value='dark'
-              onClick={(event) => {
-                document.documentElement.setAttribute(
-                  'data-theme',
-                  event.currentTarget.value,
-                );
-              }}
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -96,9 +92,11 @@ const ThemeDropDown = () => {
             data-set-theme='cupcake'
             data-act-class='outline'
           >
-            <div
+            <button
+              value='cupcake'
               data-theme='cupcake'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -111,16 +109,18 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='bumblebee'
             data-act-class='outline'
           >
-            <div
+            <button
+              value='bumblebee'
               data-theme='bumblebee'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -133,16 +133,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='emerald'
             data-act-class='outline'
           >
-            <div
-              data-theme='emerald'
+            <button
+              value='emerald'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -155,16 +156,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='corporate'
             data-act-class='outline'
           >
-            <div
-              data-theme='corporate'
+            <button
+              value='corporate'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -177,16 +179,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='synthwave'
             data-act-class='outline'
           >
-            <div
-              data-theme='synthwave'
+            <button
+              value='synthwave'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -199,16 +202,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='retro'
             data-act-class='outline'
           >
-            <div
-              data-theme='retro'
+            <button
+              value='retro'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -221,16 +225,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='cyberpunk'
             data-act-class='outline'
           >
-            <div
-              data-theme='cyberpunk'
+            <button
+              value='cyberpunk'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -243,16 +248,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='valentine'
             data-act-class='outline'
           >
-            <div
-              data-theme='valentine'
+            <button
+              value='valentine'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -265,16 +271,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='halloween'
             data-act-class='outline'
           >
-            <div
-              data-theme='halloween'
+            <button
+              value='halloween'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -287,16 +294,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='garden'
             data-act-class='outline'
           >
-            <div
-              data-theme='garden'
+            <button
+              value='garden'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -309,16 +317,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='forest'
             data-act-class='outline'
           >
-            <div
-              data-theme='forest'
+            <button
+              value='forest'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -331,16 +340,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='aqua'
             data-act-class='outline'
           >
-            <div
-              data-theme='aqua'
+            <button
+              value='aqua'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -353,16 +363,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='lofi'
             data-act-class='outline'
           >
-            <div
-              data-theme='lofi'
+            <button
+              value='lofi'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -375,16 +386,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='pastel'
             data-act-class='outline'
           >
-            <div
-              data-theme='pastel'
+            <button
+              value='pastel'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -397,16 +409,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='fantasy'
             data-act-class='outline'
           >
-            <div
-              data-theme='fantasy'
+            <button
+              value='fantasy'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -419,16 +432,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='wireframe'
             data-act-class='outline'
           >
-            <div
-              data-theme='wireframe'
+            <button
+              value='wireframe'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -441,16 +455,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='black'
             data-act-class='outline'
           >
-            <div
-              data-theme='black'
+            <button
+              value='black'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -463,16 +478,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='luxury'
             data-act-class='outline'
           >
-            <div
-              data-theme='luxury'
+            <button
+              value='luxury'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -485,16 +501,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='dracula'
             data-act-class='outline'
           >
-            <div
-              data-theme='dracula'
+            <button
+              value='dracula'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -507,16 +524,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='cmyk'
             data-act-class='outline'
           >
-            <div
-              data-theme='cmyk'
+            <button
+              value='cmyk'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -529,16 +547,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='autumn'
             data-act-class='outline'
           >
-            <div
-              data-theme='autumn'
+            <button
+              value='autumn'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -551,16 +570,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='business'
             data-act-class='outline'
           >
-            <div
-              data-theme='business'
+            <button
+              value='business'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -573,16 +593,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='acid'
             data-act-class='outline'
           >
-            <div
-              data-theme='acid'
+            <button
+              value='acid'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -595,16 +616,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='lemonade'
             data-act-class='outline'
           >
-            <div
-              data-theme='lemonade'
+            <button
+              value='lemonade'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -617,16 +639,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='night'
             data-act-class='outline'
           >
-            <div
-              data-theme='night'
+            <button
+              value='night'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -639,16 +662,17 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='coffee'
             data-act-class='outline'
           >
-            <div
-              data-theme='coffee'
+            <button
+              value='coffee'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -661,16 +685,18 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>
           <div
             className='outline-base-content overflow-hidden rounded-lg outline-2 outline-offset-2'
             data-set-theme='winter'
             data-act-class='outline'
           >
-            <div
+            <button
               data-theme='winter'
+              value='winter'
               className='bg-base-100 text-base-content w-full cursor-pointer font-sans'
+              onClick={handleTheme}
             >
               <div className='grid grid-cols-5 grid-rows-3'>
                 <div className='col-span-5 row-span-3 row-start-1 flex gap-1 py-3 px-4'>
@@ -683,7 +709,7 @@ const ThemeDropDown = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </button>
           </div>{' '}
           <a
             className='outline-base-content overflow-hidden rounded-lg'
