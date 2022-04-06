@@ -1,5 +1,9 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable @next/next/no-img-element */
 import React, { useState } from 'react';
+
+import ThemeDropDown from '../ThemeDropDown/ThemeDropDown';
 
 export default function Index() {
   const [rotate, setRotate] = useState(false);
@@ -8,14 +12,14 @@ export default function Index() {
   return (
     <div className='w-full flex justify-between'>
       <div className=' h-full relative w-full'>
-        <div className='bg-white'>
+        <div className='bg-base-100'>
           <div className='2xl:mx-auto'>
             <nav>
               <div className=' flex flex-row justify-between'>
-                <button className=' flex space-x-3 items-center py-5 lg:pl-7 sm:pl-6 py-6 pl-4 pr-8 group hover:bg-indigo-500'>
+                <button className=' flex space-x-3 items-center py-5 lg:pl-7 sm:pl-6 py-6 pl-4 pr-8 group hover:bg-primary hover:opacity-75'>
                   <svg
                     xmlns='http://www.w3.org/2000/svg'
-                    className='h-5 w-5 group-hover:text-white'
+                    className='h-5 w-5 group-hover:text-accent-content'
                     viewBox='0 0 20 20'
                     fill='currentColor'
                   >
@@ -25,7 +29,9 @@ export default function Index() {
                       clipRule='evenodd'
                     />
                   </svg>
-                  <span className='group-hover:text-white'>Google Keep</span>
+                  <span className='group-hover:text-accent-content'>
+                    Google Keep
+                  </span>
                 </button>
                 {/* For large (i.e. desktop and laptop sized screen) */}
                 {/* <div className='lg:flex hidden flex-auto justify-between flex-row px-7 py-6'>
@@ -67,10 +73,10 @@ export default function Index() {
                       name='search'
                       id='search'
                       placeholder='🔍 빠른 검색'
-                      className='transition-all focus:ring-indigo-500 focus:border-indigo-500 focus:bg-white bg-gray-100 block w-full pr-12 py-3 sm:text-sm border-gray-100 rounded-md focus:shadow-slate-400 focus:shadow-xl'
+                      className='transition-all focus:ring-primary-500 focus:border-primary-500 focus:bg-accent-content bg-base-200 block w-full pr-12 py-3 sm:text-sm border-base-200 rounded-md focus:shadow-slate-400 focus:shadow-xl'
                     />
                     <div className='absolute inset-y-0 right-0 flex py-1.5 pr-1.5'>
-                      <kbd className='inline-flex items-center border border-gray-200 rounded px-2 text-sm font-sans font-medium text-gray-400'>
+                      <kbd className='inline-flex items-center border border-base-content rounded px-2 text-sm font-sans font-medium text-base-content'>
                         {' '}
                         ⌘K{' '}
                       </kbd>
@@ -79,7 +85,7 @@ export default function Index() {
                 </div>
 
                 <div className=' hidden sm:flex justify-end flex-row lg:pr-7 sm:pr-6 py-6 pr-4 pl-8'>
-                  <div className='cursor-pointer focus:outline-none focus:ring focus:ring-offset-2 focus:ring-gray-800 relative flex justify-center items-center xl:mr-8 mr-6'>
+                  <div className='cursor-pointer focus:outline-none focus:ring focus:ring-offset-2 focus:ring-primary relative flex justify-center items-center xl:mr-8 mr-6'>
                     <svg
                       xmlns='http://www.w3.org/2000/svg'
                       className='h-5 w-5'
@@ -92,10 +98,11 @@ export default function Index() {
                         clipRule='evenodd'
                       />
                     </svg>
-                    <div className='animate-ping w-1.5 h-1.5 bg-indigo-500 rounded-full absolute top-1 right-0 m-auto duration-200' />
-                    <div className=' w-1.5 h-1.5 bg-indigo-500 rounded-full absolute top-1 right-0 m-auto shadow-lg' />
+                    <div className='animate-ping w-1.5 h-1.5 bg-primary-500 rounded-full absolute top-1 right-0 m-auto duration-200' />
+                    <div className=' w-1.5 h-1.5 bg-primary-500 rounded-full absolute top-1 right-0 m-auto shadow-lg' />
                   </div>
-                  <div className=' flex justify-center items-center flex-row'>
+                  <ThemeDropDown />
+                  {/* <div className=' flex justify-center items-center flex-row '>
                     <img
                       className='w-10 h-10 '
                       src='https://i.ibb.co/QMddNDb/Ellipse-14.png'
@@ -128,7 +135,7 @@ export default function Index() {
                         strokeLinejoin='round'
                       />
                     </svg>
-                  </div>
+                  </div> */}
                 </div>
                 {/* Burger Icon */}
                 <button
@@ -280,8 +287,8 @@ export default function Index() {
                       strokeLinejoin='round'
                     />
                   </svg>
-                  <div className='animate-ping w-1.5 h-1.5 bg-indigo-700 rounded-full absolute top-1 right-0 m-auto duration-200' />
-                  <div className=' w-1.5 h-1.5 bg-indigo-700 rounded-full absolute top-1 right-0 m-auto shadow-lg' />
+                  <div className='animate-ping w-1.5 h-1.5 bg-primary-700 rounded-full absolute top-1 right-0 m-auto duration-200' />
+                  <div className=' w-1.5 h-1.5 bg-primary-700 rounded-full absolute top-1 right-0 m-auto shadow-lg' />
                 </div>
               </div>
               <div className=' w-auto sm:w-96 focus:outline-none focus:ring foucs:ring-offset-2 focus:ring-gray-800 bg-gray-50 flex items-center pl-4  space-x-3 rounded mt-4 '>

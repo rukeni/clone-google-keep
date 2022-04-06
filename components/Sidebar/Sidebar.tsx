@@ -4,51 +4,51 @@ function Sidebar() {
     <>
       {/* Sidebar starts */}
       {/* Remove class [ hidden ] and replace [ sm:flex ] with [ flex ] */}
-      <div className='w-64 absolute sm:relative text-white flex-col justify-between sm:flex h-[calc(100vh-88px)]'>
+      <div className='w-64 absolute sm:relative text-accent-content flex-col justify-between sm:flex h-[calc(100vh-88px)]'>
         <div>
           <div className='h-8 w-full flex flex-col px-8 mt-5 font-pen-script '>
-            <p className='text-xl leading-3 text-left text-gray-600'>
+            <p className='text-xl leading-3 text-left text-base-content'>
               글쓰기 좋은날!
             </p>
-            <h3 className='text-2xl leading-5 text-gray-800 mt-2'>
-              <span className='font-bold text-indigo-500'>다시</span> 돌아오신걸
+            <h3 className='text-2xl leading-5 mt-2 text-base-content'>
+              <span className='font-bold text-primary'>다시</span> 돌아오신걸
               환영합니다.
             </h3>
           </div>
           <ul className='mt-12'>
-            <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+            <li className='flex w-full justify-between text-gray-600 hover:text-accent-content hover:bg-primary hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
               <div className='flex items-center'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='text-[#5f6368] fill-current group-hover:text-white'
+                  className='text-[#5f6368] fill-current group-hover:text-accent-content'
                 >
                   <path d='M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6A4.997 4.997 0 0 1 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z'></path>
                 </svg>
-                <span className='text-sm text-[#202124]  ml-2 group-hover:text-white'>
+                <span className='text-sm text-[#202124]  ml-2 group-hover:text-accent-content'>
                   메모
                 </span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+            <li className='flex w-full justify-between text-gray-600 hover:text-accent-content hover:bg-primary hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
               <div className='flex items-center'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='text-[#5f6368] fill-current group-hover:text-white'
+                  className='text-[#5f6368] fill-current group-hover:text-accent-content'
                 >
                   <path d='M18 17v-6c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v6H4v2h16v-2h-2zm-2 0H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6zm-4 5c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2z'></path>
                 </svg>
-                <span className='text-sm text-[#202124]  ml-2 group-hover:text-white'>
+                <span className='text-sm text-[#202124]  ml-2 group-hover:text-accent-content'>
                   알림
                 </span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+            <li className='flex w-full justify-between text-gray-600 hover:text-accent-content hover:bg-primary hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
               <div className='flex items-center'>
                 &nbsp;&nbsp;
                 <svg
@@ -56,60 +56,60 @@ function Sidebar() {
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='text-[#5f6368] fill-current group-hover:text-white'
+                  className='text-[#5f6368] fill-current group-hover:text-accent-content'
                 >
                   <path d='M17.63 5.84C17.27 5.33 16.67 5 16 5L5 5.01C3.9 5.01 3 5.9 3 7v10c0 1.1.9 1.99 2 1.99L16 19c.67 0 1.27-.33 1.63-.84L22 12l-4.37-6.16zM16 17H5V7h11l3.55 5L16 17z'></path>
                 </svg>
-                <span className='text-sm text-[#202124]  ml-2 group-hover:text-white'>
+                <span className='text-sm text-[#202124]  ml-2 group-hover:text-accent-content'>
                   메모
                 </span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+            <li className='flex w-full justify-between text-gray-600 hover:text-accent-content hover:bg-primary hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
               <div className='flex items-center'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='text-[#5f6368] fill-current group-hover:text-white'
+                  className='text-[#5f6368] fill-current group-hover:text-accent-content'
                 >
                   <path d='M20.41 4.94l-1.35-1.35c-.78-.78-2.05-.78-2.83 0L13.4 6.41 3 16.82V21h4.18l10.46-10.46 2.77-2.77c.79-.78.79-2.05 0-2.83zm-14 14.12L5 19v-1.36l9.82-9.82 1.41 1.41-9.82 9.83z'></path>
                 </svg>
-                <span className='text-sm text-[#202124]  ml-2 group-hover:text-white'>
+                <span className='text-sm text-[#202124]  ml-2 group-hover:text-accent-content'>
                   라벨 수정
                 </span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+            <li className='flex w-full justify-between text-gray-600 hover:text-accent-content hover:bg-primary hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
               <div className='flex items-center'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='text-[#5f6368] fill-current group-hover:text-white'
+                  className='text-[#5f6368] fill-current group-hover:text-accent-content'
                 >
                   <path d='M20.54 5.23l-1.39-1.68C18.88 3.21 18.47 3 18 3H6c-.47 0-.88.21-1.16.55L3.46 5.23C3.17 5.57 3 6.02 3 6.5V19c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6.5c0-.48-.17-.93-.46-1.27zM6.24 5h11.52l.83 1H5.42l.82-1zM5 19V8h14v11H5zm11-5.5l-4 4-4-4 1.41-1.41L11 13.67V10h2v3.67l1.59-1.59L16 13.5z'></path>
                 </svg>
-                <span className='text-sm text-[#202124]  ml-2 group-hover:text-white'>
+                <span className='text-sm text-[#202124]  ml-2 group-hover:text-accent-content'>
                   보관 처리
                 </span>
               </div>
             </li>
-            <li className='flex w-full justify-between text-gray-600 hover:text-white hover:bg-indigo-500 hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
+            <li className='flex w-full justify-between text-gray-600 hover:text-accent-content hover:bg-primary hover:opacity-70 group cursor-pointer items-center py-3 px-8 hover:rounded-r-full'>
               <div className='flex items-center'>
                 <svg
                   xmlns='http://www.w3.org/2000/svg'
                   width='24'
                   height='24'
                   viewBox='0 0 24 24'
-                  className='text-[#5f6368] fill-current group-hover:text-white'
+                  className='text-[#5f6368] fill-current group-hover:text-accent-content'
                 >
                   <path d='M15 4V3H9v1H4v2h1v13c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V6h1V4h-5zm2 15H7V6h10v13z'></path>
                   <path d='M9 8h2v9H9zm4 0h2v9h-2z'></path>
                 </svg>
-                <span className='text-sm text-[#202124]  ml-2 group-hover:text-white'>
+                <span className='text-sm text-[#202124]  ml-2 group-hover:text-accent-content'>
                   휴지통
                 </span>
               </div>
@@ -196,7 +196,7 @@ function Sidebar() {
       </div>
       <div className='text-gray-600 mr-8 visible sm:hidden relative'>
         <ul className='p-y w-64 border-r bg-indigo-900 absolute rounded left-0 shadow mt-8 sm:mt-16 hidden'>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center py-3 px-2'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center py-3 px-2'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -219,7 +219,7 @@ function Sidebar() {
               <span className='text-sm  ml-2'>Dashboard</span>
             </div>
           </li>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center px-2 py-3'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center px-2 py-3'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -239,7 +239,7 @@ function Sidebar() {
               <span className='text-sm  ml-2'>Products</span>
             </div>
           </li>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center px-2 py-3'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center px-2 py-3'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -260,7 +260,7 @@ function Sidebar() {
               <span className='text-sm  ml-2'>Performance</span>
             </div>
           </li>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center px-2 py-3'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center px-2 py-3'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -282,7 +282,7 @@ function Sidebar() {
               <span className='text-sm  ml-2'>Deliverables</span>
             </div>
           </li>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center  px-2 py-3'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center  px-2 py-3'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -302,7 +302,7 @@ function Sidebar() {
               <span className='text-sm  ml-2'>Invoices</span>
             </div>
           </li>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center px-2 py-3'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center px-2 py-3'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'
@@ -324,7 +324,7 @@ function Sidebar() {
               <span className='text-sm  ml-2'>Inventory</span>
             </div>
           </li>
-          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-indigo-500 cursor-pointer items-center px-2 py-3'>
+          <li className='flex w-full justify-between text-gray-600 hover:text-gray-300 hover:bg-primary cursor-pointer items-center px-2 py-3'>
             <div className='flex items-center'>
               <svg
                 xmlns='http://www.w3.org/2000/svg'

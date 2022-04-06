@@ -58,3 +58,7 @@ export const useSupabase = async () => {
   console.log('status', status);
   return { labels, status };
 };
+
+export const useDragSelection = () => {
+  return 'selection controller';
+};
