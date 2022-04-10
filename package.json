@@ -10,8 +10,10 @@
     "lint": "next lint",
     "serve": "serve ./out",
     "build:export": "next build && next export",
+    "test": "echo hello world",
     "storybook": "start-storybook -p 6006 -s ./public",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prepare": "husky install"
   },
   "repository": {
     "type": "git",
@@ -54,6 +56,7 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "eslint-plugin-storybook": "^0.5.8",
+    "husky": "^7.0.4",
     "postcss": "^8.4.12",
     "postcss-100vh-fix": "^1.0.2",
     "postcss-flexbugs-fixes": "^5.0.2",
